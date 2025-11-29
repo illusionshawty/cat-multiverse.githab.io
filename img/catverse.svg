@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 220" width="920" height="220">
+  <defs>
+    <style>
+      .txt { fill: #ffffffff; font-family: Montserrat, Inter, Arial, Helvetica, sans-serif; font-weight: 700; letter-spacing: 8px; }
+    </style>
+  </defs>
+  <!-- Text parts -->
+  <text x="60"  y="150" font-size="128" class="txt">C</text>
+  <text x="170" y="150" font-size="128" class="txt">Λ</text>
+  <text x="285" y="150" font-size="128" class="txt">T</text>
+  <text x="405" y="150" font-size="128" class="txt">V</text>
+
+  <!-- Custom E as three horizontal bars (aligned to baseline) -->
+  <g fill="#ffffffff">
+    <rect x="520" y="54" width="82" height="12" rx="2" />
+    <rect x="520" y="96" width="82" height="12" rx="2" />
+    <rect x="520" y="138" width="82" height="12" rx="2" />
+  </g>
+
+  <!-- Remaining letters -->
+  <text x="624" y="150" font-size="128" class="txt">RSE</text>
+</svg>

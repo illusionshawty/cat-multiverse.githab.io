@@ -1,0 +1,296 @@
+.game__catleak {
+    padding: 30px 70px;
+    background: linear-gradient(to top,
+            rgb(0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.884) 20%,
+            rgba(0, 0, 0, 0.76) 40%,
+            rgba(0, 0, 0, 0.596) 60%,
+            rgba(0, 0, 0, 0.308) 80%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.game__ui {
+    max-width: 1200px;
+    padding: 0 20px 25px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ui__timer {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+.ui__score {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+.game__room {
+    max-width: 1200px;
+    aspect-ratio: 1200 / 800;
+    background: url(../img/catleak/catleak-bg.png) no-repeat center/contain;
+    position: relative;
+    overflow: hidden;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.game__end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.end-message-win,
+.end-message-loss {
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 1.5px;
+    padding: 25px 0 0;
+    display: none;
+}
+
+.buttons-row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* --- */
+
+#zone-computer {
+    position: absolute;
+    left: 74.58%;
+    top: 29.38%;
+    width: 7.5%;
+    height: 17.5%;
+    ;
+}
+
+#zone-bed {
+    position: absolute;
+    left: 43.67%;
+    top: 11.88%;
+    width: 16.67%;
+    height: 51.25%;
+    cursor: pointer;
+}
+
+#zone-carpet {
+    position: absolute;
+    left: 22.5%;
+    top: 63.75%;
+    width: 42.92%;
+    height: 28.75%;
+    cursor: pointer;
+}
+
+#zone-sofa {
+    position: absolute;
+    left: 7.5%;
+    top: 25%;
+    width: 25.83%;
+    height: 28.13%;
+    cursor: pointer;
+}
+
+#bowl {
+    position: absolute;
+    left: 11.6%;
+    top: 59%;
+    width: 7.83%;
+    height: 11.13%;
+    cursor: pointer;
+}
+
+.puddle {
+    position: absolute;
+    width: 60px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.paw {
+    position: absolute;
+    width: 35px;
+    opacity: 0.8;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+
+.glitch {
+    animation: glitch 0.2s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+        filter: hue-rotate(0deg);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+        filter: hue-rotate(30deg);
+    }
+
+    40% {
+        transform: translate(2px, -2px);
+        filter: hue-rotate(-30deg);
+    }
+
+    60% {
+        transform: translate(3px, 0);
+        filter: hue-rotate(15deg);
+    }
+
+    80% {
+        transform: translate(0, -3px);
+        filter: hue-rotate(-15deg);
+    }
+
+    100% {
+        transform: translate(0);
+        filter: hue-rotate(0deg);
+    }
+}
+
+.puddle-big {
+    width: 200px;
+    opacity: 0.9;
+    z-index: 10;
+    animation: puddleGrow 0.4s ease-out forwards;
+}
+
+@keyframes puddleGrow {
+    from {
+        transform: translate(-50%, -50%) scale(0.3);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* ================================ */
+
+@media (max-width: 1200px) {
+    .game__catleak {
+        padding: 20px 30px;
+    }
+
+    .game__ui {
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 15px;
+    }
+
+    .ui__timer, .ui__score {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 900px) {
+    .game__catleak {
+        padding: 15px 15px;
+    }
+
+    .game__room {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+    .puddle {
+        width: 45px;
+    }
+
+    .paw {
+        width: 25px;
+    }
+
+    .buttons-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .game__catleak {
+        padding: 10px 20px;
+    }
+
+    .ui__timer, .ui__score {
+        font-size: 19px;
+    }
+
+    .game__room {
+        max-width: 95vw;
+    }
+
+    #zone-computer,
+    #zone-bed,
+    #zone-carpet,
+    #zone-sofa,
+    #bowl {
+        transform: scale(0.9);
+        transform-origin: top left;
+    }
+
+    .puddle {
+        width: 35px;
+    }
+
+    .paw {
+        width: 20px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .game__catleak {
+        padding: 10px 20px;
+    }
+
+    .ui__timer, .ui__score {
+        font-size: 16px;
+    }
+
+    .puddle {
+        width: 28px;
+    }
+
+    .paw {
+        width: 18px;
+    }
+
+    .end-message-win,
+    .end-message-loss {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    .btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

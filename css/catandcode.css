@@ -1,0 +1,996 @@
+.game4 {
+    padding: 30px 70px;
+    background: none;
+}
+
+.article--dark {
+    background: rgba(10, 10, 15, 0.75);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    color: #ddd;
+    font-family: "Cousine", monospace;
+    line-height: 1.55;
+    position: relative;
+    overflow: hidden;
+}
+
+.article__title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f0f0f0;
+}
+
+.article__meta {
+    font-size: 14px;
+    opacity: 0.5;
+    margin-bottom: 25px;
+}
+
+.article__section {
+    margin-bottom: 35px;
+}
+
+.article__section h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #c8c8ff;
+    text-shadow: 0 0 8px #6b5cff55;
+}
+
+.article__list {
+    padding-left: 20px;
+    margin: 10px 0;
+    opacity: 0.8;
+}
+
+.article__quote {
+    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 2px solid #444;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.article__final {
+    border-top: 1px solid #333;
+    padding-top: 25px;
+}
+
+.article__important {
+    font-size: 22px;
+    margin: 20px 0 10px;
+    color: #ff6161;
+    text-shadow: 0 0 12px #ff000033;
+}
+
+.article__warning {
+    font-size: 15px;
+    opacity: 0.6;
+}
+
+.glitch-target {
+    position: relative;
+}
+
+.glitch-trigger {
+    animation: subtlePulse 3s infinite ease-in-out;
+}
+
+@keyframes subtlePulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.article--dark.vhs-glitch {
+    position: relative;
+    animation: vhs-jitter 0.25s infinite steps(2);
+}
+
+.article--dark.vhs-glitch::before,
+.article--dark.vhs-glitch::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0.5;
+}
+
+.article--dark.vhs-glitch::before {
+    border-left: 1px solid rgba(0, 255, 255, 0.4);
+    transform: translateX(-2px);
+    filter: drop-shadow(-2px 0 0 rgba(0, 255, 255, 0.6));
+}
+
+.article--dark.vhs-glitch::after {
+    border-right: 1px solid rgba(255, 0, 128, 0.4);
+    transform: translateX(2px);
+    filter: drop-shadow(2px 0 0 rgba(255, 0, 128, 0.6));
+}
+
+.article--dark.vhs-glitch .article__section {
+    position: relative;
+    overflow: hidden;
+}
+
+.article--dark.vhs-glitch .article__section::after {
+    content: "";
+    position: absolute;
+    left: -10%;
+    width: 120%;
+    height: 2px;
+    background: linear-gradient(to right,
+            transparent 0%,
+            #ffffff55 20%,
+            transparent 60%,
+            #ffffff33 100%);
+    opacity: 0.6;
+    animation: vhs-line 0.4s infinite;
+}
+
+.article--dark.vhs-glitch .article__important,
+.article--dark.vhs-glitch .article__title {
+    text-shadow:
+        -1px 0 0 #ff00c8,
+        1px 0 0 #00ffff,
+        0 0 6px #ffffff55;
+}
+
+@keyframes vhs-jitter {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-1px, 0);
+    }
+
+    50% {
+        transform: translate(1px, -1px);
+    }
+
+    75% {
+        transform: translate(0, 1px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes vhs-line {
+    0% {
+        top: -10%;
+    }
+
+    100% {
+        top: 110%;
+    }
+}
+
+.article--dark {
+    background: rgba(10, 10, 20, 0.55);
+    padding: 45px;
+    border-radius: 22px;
+    position: relative;
+    overflow: hidden;
+
+    backdrop-filter: blur(10px) saturate(1.25);
+    -webkit-backdrop-filter: blur(10px) saturate(1.25);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.65),
+        0 0 40px rgba(66, 42, 161, 0.18);
+}
+
+.article--dark::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+
+    background: radial-gradient(circle at center,
+            transparent 45%,
+            rgba(0, 0, 0, 0.55) 100%);
+}
+
+.article--dark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+
+    background: repeating-linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.01) 0px,
+            rgba(255, 255, 255, 0.01) 1px,
+            transparent 3px,
+            transparent 4px);
+
+    animation: vhsLineMove 7s linear infinite;
+    opacity: 0.45;
+}
+
+.article--dark h1,
+.article--dark h2,
+.article--dark p,
+.article--dark li {
+    position: relative;
+    z-index: 3;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.07);
+}
+
+.article--dark h1 {
+    text-shadow:
+        0 0 6px rgba(255, 255, 255, 0.12),
+        0 0 3px rgba(66, 42, 161, 0.18);
+}
+
+.article--dark h2 {
+    text-shadow: 0 0 4px rgba(66, 42, 161, 0.25);
+}
+
+.vhs-alert {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, #000000ee 0%, #000000f7 40%, #000000 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 9999;
+}
+
+.vhs-alert--visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.vhs-alert__inner {
+    border: 2px solid var(--general-color);
+    padding: 30px 40px;
+    border-radius: 20px;
+    text-align: center;
+    font-family: "Cousine", monospace;
+    background: #05050a;
+    box-shadow: 0 0 40px #7159d4d3;
+    position: relative;
+    overflow: hidden;
+}
+
+.vhs-alert__inner::before {
+    content: "";
+    position: absolute;
+    inset: -40px;
+    background-image:
+        repeating-linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.12) 0px,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 2px,
+            transparent 4px);
+    mix-blend-mode: soft-light;
+    opacity: 0.5;
+    animation: vhs-noise 0.7s infinite linear;
+    pointer-events: none;
+}
+
+@keyframes vhs-noise {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.vhs-alert__label {
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: var(--general-color);
+}
+
+.vhs-alert__sub {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.vhs-alert__btn {
+    margin-top: 0;
+    background: var(--general-color);
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+
+.glitch-button {
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.glitch-button:hover {
+    color: #ff3e59;
+    text-shadow: 0 0 8px #ff0033aa;
+    transform: scale(1.03);
+}
+
+.puzzle-container {
+    display: none;
+    margin-top: 40px;
+}
+
+.puzzle-container.puzzle-container--visible {
+    display: block;
+}
+
+.puzzle-header {
+    margin-bottom: 15px;
+    font-family: "Cousine", monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #f2f2f2;
+    opacity: 0.85;
+}
+
+.puzzle-header__title {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.puzzle-header__subtitle {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+@keyframes vhs-noise-shift {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.puzzle-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.puzzle-label {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.puzzle-terminal--error {
+    animation: puzzle-error-shake 0.24s linear 1;
+}
+
+@keyframes puzzle-error-shake {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-4px, 0);
+    }
+
+    50% {
+        transform: translate(4px, 0);
+    }
+
+    75% {
+        transform: translate(-2px, 0);
+    }
+}
+
+.puzzle-terminal--success {
+    box-shadow: 0 0 30px #4cffaa88;
+    border-color: #4cffaa;
+}
+
+.puzzle-terminal--success-soft {
+    box-shadow: 0 0 25px #ff004466;
+    border-color: #ff3366aa;
+}
+
+.vhs-alert {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 999999 !important;
+}
+
+body.vhs-global-glitch {
+    overflow: hidden;
+}
+
+.body.vhs-global-glitch {
+    filter: contrast(1.1) saturate(1.2);
+}
+
+.puzzle-terminal {
+    position: relative;
+    background: radial-gradient(circle at top left, #110f1d 0%, #080712 40%, #05030d 100%);
+    border-radius: 18px;
+    padding: 22px 22px 18px;
+    border: 2px solid #422AA1;
+    box-shadow:
+        0 0 25px rgba(66, 42, 161, 0.55),
+        0 0 60px rgba(109, 82, 255, 0.35);
+
+    overflow: hidden;
+    font-family: "Cousine", monospace;
+    color: #fdfdfd;
+}
+
+@keyframes vhs-terminal-jitter {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-0.5px, 0.5px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.puzzle-noise {
+    pointer-events: none;
+    position: absolute;
+    inset: -40px;
+    background-image:
+        repeating-linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.07) 0px,
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 2px,
+            transparent 3px);
+    mix-blend-mode: soft-light;
+    opacity: 0.28;
+    animation: vhs-noise-shift 0.6s infinite linear;
+}
+
+.puzzle-log {
+    font-size: 12px;
+    max-height: 130px;
+    overflow-y: auto;
+    margin-bottom: 12px;
+    padding-right: 10px;
+    white-space: pre-wrap;
+}
+
+.puzzle-log-line--system {
+    color: #9edbff;
+}
+
+.puzzle-log-line--virus {
+    color: #d068ff;
+    text-shadow: 0 0 6px rgba(208, 104, 255, 0.4);
+}
+
+.puzzle-log-line--ok {
+    color: #a7ff7a;
+}
+
+.puzzle-log-line--error {
+    color: #ffbe6a;
+}
+
+.puzzle-code {
+    background: #0b0a16;
+    border-radius: 12px;
+    border: 1px solid rgba(66, 42, 161, 0.55);
+    padding: 12px 14px;
+    font-size: 13px;
+    margin-bottom: 14px;
+    white-space: pre;
+    overflow-x: auto;
+    color: #eaddff;
+    text-shadow:
+        0 0 6px rgba(66, 42, 161, 0.55),
+        -1px 0 0 rgba(66, 42, 161, 0.35),
+        1px 0 0 rgba(160, 130, 255, 0.25);
+}
+
+.puzzle-textarea {
+    background: #090715;
+    color: #f7f7f7;
+    border-radius: 10px;
+    border: 1px solid rgba(66, 42, 161, 0.4);
+    padding: 8px 10px;
+    font-family: "Cousine", monospace;
+    font-size: 13px;
+    resize: vertical;
+    min-height: 90px;
+}
+
+.puzzle-textarea:focus {
+    outline: none;
+    border-color: #422AA1;
+    box-shadow: 0 0 0 1px rgba(66, 42, 161, 0.45);
+}
+
+.puzzle-btn {
+    align-self: flex-start;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    padding: 9px 22px;
+    border-radius: 999px;
+
+    border: none;
+
+    margin-top: 4px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.puzzle-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 26px rgba(66, 42, 161, 0.75);
+}
+
+.puzzle-hint {
+    font-size: 11px;
+    opacity: 0.7;
+    margin-top: -4px;
+    margin-bottom: 4px;
+}
+
+.puzzle-status {
+    font-size: 12px;
+    min-height: 16px;
+    opacity: 0.9;
+}
+
+body.terminal-active::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center,
+            rgba(66, 42, 161, 0.25) 0%,
+            rgba(66, 42, 161, 0.10) 45%,
+            transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.6s ease;
+    opacity: 1;
+}
+
+body.terminal-active {
+    background: #0a0918;
+}
+
+.body-catandcode::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center,
+            rgba(66, 42, 161, 0.25) 0%,
+            rgba(66, 42, 161, 0.10) 45%,
+            transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.6s ease;
+    opacity: 1;
+}
+
+.body-catandcode {
+    background: #0a0918e3;
+}
+
+.article--dark .article__section h2 {
+    position: relative;
+    white-space: normal;
+}
+
+.article--dark .article__section h2 span {
+    display: inline-block;
+    animation: h2Glitch 0.8s infinite steps(2) alternate;
+}
+
+.article--dark .article__section h2 span:nth-child(2n) {
+    animation-delay: 0.12s;
+}
+
+.article--dark .article__section h2 span:nth-child(3n) {
+    animation-delay: 0.2s;
+}
+
+.article--dark .article__section h2 span:nth-child(4n) {
+    animation-delay: 0.05s;
+}
+
+@keyframes h2Glitch {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(1px, -1px);
+    }
+
+    100% {
+        transform: translate(-1px, 1px);
+    }
+}
+
+.puzzle-log::-webkit-scrollbar {
+    width: 8px;
+}
+
+.puzzle-log::-webkit-scrollbar-track {
+    background: rgba(30, 20, 70, 0.3);
+    border-radius: 10px;
+}
+
+.puzzle-log::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,
+            rgba(120, 90, 255, 0.8),
+            rgba(66, 42, 161, 0.9));
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(120, 90, 255, 0.6);
+}
+
+.puzzle-log::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg,
+            rgba(160, 130, 255, 1),
+            rgba(90, 60, 200, 1));
+}
+
+.game-ending {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.85) 60%,
+            rgba(0, 0, 0, 0.7) 100%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    animation: fadeInEnd 0.8s ease forwards;
+}
+
+@keyframes fadeInEnd {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.game-ending__inner {
+    text-align: center;
+    font-family: "Cousine", monospace;
+    color: #f5f5ff;
+    animation: endPulse 2s infinite ease-in-out;
+}
+
+@keyframes endPulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.92;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.game-ending__title {
+    font-size: 40px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #6d55ff;
+    text-shadow:
+        0 0 15px #6d55ff,
+        0 0 30px #422AA1;
+    margin-bottom: 20px;
+}
+
+.game-ending__subtitle {
+    opacity: 0.7;
+    margin-bottom: 35px;
+    font-size: 14px;
+}
+
+.game-ending__btn {
+    font-size: 14px;
+    padding: 12px 30px;
+    background: #6d55ff;
+    color: #000;
+    border-radius: 8px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.game-ending__btn:hover {
+    background: #8a78ff;
+    transform: scale(1.05);
+}
+
+.puzzle-code {
+    position: relative;
+    cursor: pointer;
+}
+
+.puzzle-code.copied::after {
+    content: "Скопировано!";
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    background: #8a78ff;
+    color: #000;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    animation: fadeCopied 1.4s ease forwards;
+    pointer-events: none;
+}
+
+@keyframes fadeCopied {
+    0% { opacity: 0; transform: translateY(-5px); }
+    10% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-5px); }
+}
+
+
+
+/* адаптив */
+
+
+@media (max-width: 1024px) {
+
+    .game4 {
+        padding: 20px;
+    }
+
+    .article--dark {
+        padding: 30px;
+        border-radius: 18px;
+    }
+
+    .article__title {
+        font-size: 26px;
+    }
+
+    .article__section h2 {
+        font-size: 20px;
+    }
+
+    .puzzle-terminal {
+        padding: 18px;
+    }
+
+    .puzzle-code {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .game4 {
+        padding: 15px;
+    }
+
+    .article--dark {
+        padding: 22px;
+    }
+
+    .article__title {
+        font-size: 22px;
+    }
+
+    .article__section h2 {
+        font-size: 18px;
+    }
+
+    .article__meta {
+        font-size: 12px;
+    }
+
+    .article__list li {
+        font-size: 14px;
+    }
+
+    .puzzle-terminal {
+        padding: 16px;
+    }
+
+    .puzzle-log {
+        max-height: 110px;
+    }
+
+    .puzzle-code {
+        font-size: 11px;
+    }
+
+    .puzzle-textarea {
+        font-size: 12px;
+        min-height: 70px;
+    }
+
+    .puzzle-btn {
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+
+    .vhs-alert__inner {
+        padding: 25px;
+        border-radius: 16px;
+    }
+
+    .vhs-alert__label {
+        font-size: 16px;
+    }
+
+    .vhs-alert__sub {
+        font-size: 12px;
+    }
+
+    .vhs-alert__btn {
+        font-size: 13px;
+        padding: 10px 24px;
+    }
+
+    .game-ending__title {
+        font-size: 28px;
+    }
+
+    .game-ending__subtitle {
+        font-size: 12px;
+    }
+
+    .game-ending__btn {
+        padding: 10px 22px;
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .game4 {
+        padding: 10px 0;
+    }
+
+    /* статья */
+    .article--dark {
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .article__title {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .article__section h2 {
+        font-size: 16px;
+        white-space: wrap;
+    }
+
+    .article__section p,
+    .article__list li {
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    .article__important {
+        font-size: 16px;
+    }
+
+    .puzzle-header__title {
+        font-size: 13px;
+    }
+
+    .puzzle-header__subtitle {
+        font-size: 11px;
+    }
+
+    .puzzle-terminal {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .puzzle-log {
+        max-height: 95px;
+        font-size: 11px;
+    }
+
+    .puzzle-code {
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    .puzzle-textarea {
+        font-size: 11px;
+        min-height: 60px;
+    }
+
+    .puzzle-btn {
+        font-size: 10px;
+        padding: 7px 16px;
+    }
+
+    .vhs-alert__inner {
+        width: 90%;
+        padding: 18px;
+    }
+
+    .vhs-alert__label {
+        font-size: 14px;
+    }
+
+    .vhs-alert__sub {
+        font-size: 11px;
+    }
+
+    .vhs-alert__btn {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    .game-ending__title {
+        font-size: 22px;
+        letter-spacing: 0.1em;
+    }
+
+    .game-ending__subtitle {
+        font-size: 11px;
+    }
+
+    .game-ending__btn {
+        font-size: 12px;
+        padding: 9px 20px;
+    }
+}

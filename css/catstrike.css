@@ -1,0 +1,324 @@
+.game {
+    position: relative;
+}
+
+.catstrike {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#catCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.crosshair {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 32px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.hud {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 5px #000;
+}
+
+#catCanvas {
+    cursor: none;
+}
+
+.upgrade-overlay {
+    position: absolute;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 10, 25, 0.65);
+    z-index: 20;
+}
+
+.upgrade-overlay.show {
+    display: flex;
+}
+
+.upgrade-window {
+    background: #1b1230;
+    border-radius: 24px;
+    padding: 24px 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    max-width: 420px;
+    width: 100%;
+    color: #fff;
+    border: 2px solid #ff6ad5;
+}
+
+.upgrade-window h2 {
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.upgrade-wave-info {
+    margin-bottom: 16px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.upgrade-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upgrade-btn {
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    background: #ff6ad5;
+    color: #1b1230;
+    font-weight: 600;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s;
+}
+
+.upgrade-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(255, 106, 213, 0.6);
+    background: #ff8ae0;
+}
+
+#bossBarContainer {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 20px;
+    border: 3px solid #ff4da6;
+    background: #210a20;
+    border-radius: 10px;
+    display: none;
+    z-index: 999;
+}
+
+#bossBar {
+    height: 100%;
+    background: linear-gradient(90deg, #ff006e, #ff89c6);
+    width: 100%;
+    border-radius: 7px;
+}
+
+
+.end-screen {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+    color: #fff;
+    font-family: "Cousine", monospace;
+    text-align: center;
+}
+
+.end-screen h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #ff6ad5;
+}
+
+.end-screen button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 12px;
+    border: none;
+    background: #ff6ad5;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.end-screen button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(255, 106, 213, 0.6);
+    background: #ff8ae0;
+}
+
+.btn_prev-home {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 12px;
+    border: none;
+    background: #ff6ad5;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.btn_prev-home:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(255, 106, 213, 0.6);
+    background: #ff8ae0;
+}
+
+
+/* адаптив */
+
+
+@media (max-width: 1024px) {
+
+    .catstrike {
+        height: 75vh;
+    }
+
+    .hud {
+        font-size: 18px;
+        bottom: 15px;
+    }
+
+    #bossBarContainer {
+        width: 70%;
+        top: 15px;
+    }
+
+    .upgrade-window {
+        max-width: 380px;
+        padding: 20px 28px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .catstrike {
+        height: 70vh;
+        border-radius: 14px;
+    }
+
+    .hud {
+        font-size: 16px;
+        bottom: 12px;
+        left: 12px;
+    }
+
+    #bossBarContainer {
+        width: 80%;
+        height: 16px;
+    }
+
+    .end-screen h1 {
+        font-size: 42px;
+    }
+
+    .end-screen button,
+    .btn_prev-home {
+        font-size: 18px;
+        padding: 10px 22px;
+    }
+
+    .upgrade-window {
+        padding: 18px 22px;
+        max-width: 340px;
+    }
+
+    .upgrade-btn {
+        font-size: 15px;
+        padding: 9px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .catstrike {
+        height: 65vh;
+        border-radius: 12px;
+    }
+
+    #catCanvas {
+        cursor: default;
+    }
+
+    .hud {
+        font-size: 13px;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    #bossBarContainer {
+        width: 90%;
+        height: 14px;
+        border-width: 2px;
+        top: 10px;
+    }
+
+    .end-screen h1 {
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
+
+    .end-screen button,
+    .btn_prev-home {
+        font-size: 16px;
+        padding: 9px 20px;
+    }
+
+    .upgrade-window {
+        padding: 16px 18px;
+        border-radius: 18px;
+        max-width: 280px;
+    }
+
+    .upgrade-window h2 {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .upgrade-wave-info {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .upgrade-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .catstrike {
+        height: 60vh;
+    }
+
+    .hud {
+        font-size: 12px;
+    }
+
+    .end-screen h1 {
+        font-size: 28px;
+    }
+
+    .upgrade-window {
+        max-width: 250px;
+        padding: 14px 16px;
+    }
+}
