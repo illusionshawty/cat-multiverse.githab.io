@@ -382,7 +382,7 @@ const endingBackBtn = document.getElementById('endingBackBtn');
 
 if (endingBackBtn) {
     endingBackBtn.addEventListener('click', () => {
-        window.location.href = "/";
+        window.location.href = "../index.html";
     });
 }
 
