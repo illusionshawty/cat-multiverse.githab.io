@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> cat-strike - игра</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+
+<body class="body">
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__inner">
+                        <a class="header__logo" href="/">
+                            <img src="img/catverse.svg" alt="лого">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="main">
+            <div class="container">
+
+                <div class="game">
+                    <div class="catstrike">
+                        <canvas id="catCanvas"></canvas>
+                        <div id="gameOverScreen" class="end-screen">
+                            <h1>GAME OVER</h1>
+                            <p>Ты проиграл...</p>
+                            <button onclick="restartGame()">Играть снова</button>
+                            <a href="index.html" class="btn_prev-home">на главную</a>
+                        </div>
+
+                        <div id="winScreen" class="end-screen">
+                            <h1>ПОБЕДА!</h1>
+                            <p>Ты уничтожил босса</p>
+                            <button onclick="restartGame()">Играть снова</button>
+                            <a href="index.html" class="btn_prev-home">на главную</a>
+                        </div>
+
+                        <div id="bossBarContainer">
+                            <div id="bossBar"></div>
+                        </div>
+                        <div class="upgrade-overlay" id="upgradeOverlay">
+                            <div class="upgrade-window">
+                                <h2>Выбери усиление</h2>
+                                <p class="upgrade-wave-info">После волны <span id="upgradeWaveNum"></span></p>
+                                <div class="upgrade-buttons">
+                                    <button class="upgrade-btn" data-upgrade="damage">+20% урона</button>
+                                    <button class="upgrade-btn" data-upgrade="crit">+5% шанс крита</button>
+                                    <button class="upgrade-btn" data-upgrade="double">Двойной выстрел</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hud">
+                            <span class="hp">❤️ <span id="hp">100</span></span>
+                            <span class="kills"> 👾 Убито: <span id="kills">0</span></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <script src="js/game5.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> search - игра</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+
+<body class="body">
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__inner">
+                        <a class="header__logo" href="/">
+                            <img src="img/catverse.svg" alt="лого">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="main">
+            <div class="container">
+
+                <div class="game__search">
+                    <div class="game__ui">
+                        <div class="ui__timer">Время: <span id="time">20</span> c</div>
+                        <div class="ui__score-puddle">Найдено луж: <span id="puddle">0</span></div>
+                        <div class="ui__score-object">Найдено предметов: <span id="object">0</span></div>
+                    </div>
+
+                    <div class="game__room-search">
+
+                        <div class="magnifier"></div>
+
+                        <div class="object" data-type="object" id="object-scratching">
+                            <img src="img/search/scratching.png" alt="">
+                        </div>
+                        <div class="object" data-type="object" id="object-mint">
+                            <img src="img/search/mint.png" alt="">
+                        </div>
+                        <div class="object" data-type="object" id="object-mouse">
+                            <img src="img/search/mouse.png" alt="">
+                        </div>
+                        <div class="object" data-type="object" id="object-ball">
+                            <img src="img/search/ball.png" alt="">
+                        </div>
+                        <div class="puddle" id="puddle-1">
+                            <img src="img/search/puddle.png" alt="">
+                        </div>
+                        <div class="puddle" id="puddle-2">
+                            <img src="img/search/puddle.png" alt="">
+                        </div>
+                        <div class="puddle" id="puddle-3">
+                            <img src="img/search/puddle.png" alt="">
+                        </div>
+                    </div>
+                    <div class="buttons-row">
+                        <a href="index.html" class="btn btn-prev-global">Вернуться на главную</a>
+                        <button class="btn" id="restart">Играть ещё</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <script src="js/game3.js"></script>
+
+</body>
+
+</html>

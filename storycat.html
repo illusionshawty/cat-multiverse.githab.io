@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>storycat - игра</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+
+<body class="body">
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__inner">
+                        <a class="header__logo" href="/">
+                            <img src="img/catverse.svg" alt="лого">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="main">
+            <div class="container">
+                <div class="game__storycat">
+                    <div class="story-wrapper">
+
+                        <!-- СЦЕНА 1 ВСТУПЛЕНИЕ -->
+                        <section class="scene scene-intro" data-scene="1">
+                            <div class="scene__content scene__content-intro">
+                                <div class="scene__panel">
+                                    <h1 class="scene__title">История Вездессущей Кошки</h1>
+                                    <p class="scene__text">
+                                        Она появляется там, где её быть не должно.<br>
+                                        Прокручивай вниз, чтобы увидеть доказательства.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- СЦЕНА 2 РАБОЧИЙ СТОЛ -->
+                        <section class="scene scene-desk" data-scene="2">
+                            <div class="scene__content">
+                                <div class="scene__panel">
+                                    <h2 class="scene__title">На столе — она.</h2>
+                                    <p class="scene__text">
+                                        Вроде бы обычное рабочее место: монитор, клавиатура, кружка с чаем...<br>
+                                        Но если присмотреться — центр Вселенной здесь занимает она.
+                                    </p>
+                                    <button class="clue-btn" type="button" data-open-evidence>
+                                        Посмотреть улику
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="polaroid" data-polaroid>
+                                <img src="img/storycat/1.jpg" alt="Чита на столе">
+                                <div class="polaroid__caption">Улика №1: Заняла рабочее место.</div>
+                            </div>
+                        </section>
+
+                        <!-- СЦЕНА 3 ЦВЕТОК -->
+                        <section class="scene scene-flower" data-scene="3">
+                            <div class="scene__content">
+                                <div class="scene__panel">
+                                    <h2 class="scene__title">В цветке — тоже она.</h2>
+                                    <p class="scene__text">
+                                        Казалось бы, просто растение у окна.<br>
+                                        Но из густой зелени на тебя смотрят очень внимательные глаза.
+                                    </p>
+                                    <button class="clue-btn" type="button" data-open-evidence>
+                                        Посмотреть улику
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="polaroid" data-polaroid>
+                                <img src="img/storycat/5.jpg" alt="Чита в растениях">
+                                <div class="polaroid__caption">Улика №2: Скрывалась в растениях.</div>
+                            </div>
+                        </section>
+
+                        <!-- СЦЕНА 4 КОРОБКА -->
+                        <section class="scene scene-box" data-scene="4">
+                            <div class="scene__content">
+                                <div class="scene__panel">
+                                    <h2 class="scene__title">В коробке — угадай кто?</h2>
+                                    <p class="scene__text">
+                                        Любая коробка рано или поздно становится коробкой с кошкой.<br>
+                                        Даже если ты только что её освободил.
+                                    </p>
+                                    <button class="clue-btn" type="button" data-open-evidence>
+                                        Посмотреть улику
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="polaroid" data-polaroid>
+                                <img src="img/storycat/2.jpg" alt="Чита в коробке">
+                                <div class="polaroid__caption">Улика №3: Заселилась в коробку.</div>
+                            </div>
+                        </section>
+
+                        <!-- СЦЕНА 5 КЛАВИАТУРА -->
+                        <section class="scene scene-keyboard" data-scene="5">
+                            <div class="scene__content">
+                                <div class="scene__panel">
+                                    <h2 class="scene__title">На клавиатуре — естественно, она.</h2>
+                                    <p class="scene__text">
+                                        Никто ещё не придумал способ печатать поверх кошки.<br>
+                                        Зато она придумала тысячу способов лечь поверх клавиатуры.
+                                    </p>
+                                    <button class="clue-btn" type="button" data-open-evidence>
+                                        Посмотреть улику
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="polaroid" data-polaroid>
+                                <img src="img/storycat/10.jpg" alt="Чита на клавиатуре">
+                                <div class="polaroid__caption">Улика №4: Блокировка ввода.</div>
+                            </div>
+                        </section>
+
+                        <!-- СЦЕНА 6 РАКОВИНА -->
+                        <section class="scene scene-sink" data-scene="6">
+                            <div class="scene__content">
+                                <div class="scene__panel">
+                                    <h2 class="scene__title">Даже в самых странных местах…</h2>
+                                    <p class="scene__text">
+                                        Холодная керамика, идеальная форма миски.<br>
+                                        Если ты искал логики — её здесь нет. Зато есть кошка.
+                                    </p>
+                                    <button class="clue-btn" type="button" data-open-evidence>
+                                        Посмотреть улику
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="polaroid" data-polaroid>
+                                <img src="img/storycat/7.jpg" alt="Чита в раковине">
+                                <div class="polaroid__caption">Улика №5: Обнаружена в раковине.</div>
+                            </div>
+                        </section>
+
+                        <!-- СЦЕНА 7 РЮКЗАК -->
+                        <section class="scene scene-bag" data-scene="7">
+                            <div class="scene__content">
+                                <div class="scene__panel">
+                                    <h2 class="scene__title">Иногда она пытается сбежать…</h2>
+                                    <p class="scene__text">
+                                        Рюкзаки и сумки — порталы в другие миры.<br>
+                                        И, возможно, она уже выбрала себе новый.
+                                    </p>
+                                    <button class="clue-btn" type="button" data-open-evidence>
+                                        Посмотреть улику
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="polaroid" data-polaroid>
+                                <img src="img/storycat/9.jpg" alt="Чита в сумке">
+                                <div class="polaroid__caption">Улика №6: Готовила побег.</div>
+                            </div>
+                        </section>
+
+                        <!-- СЦЕНА 8 ПАКЕТ -->
+                        <section class="scene scene-bag2" data-scene="8">
+                            <div class="scene__content">
+                                <div class="scene__panel">
+                                    <h2 class="scene__title">А иногда — просто шпионит.</h2>
+                                    <p class="scene__text">
+                                        Пакеты шуршат, шуршание маскирует присутствие.<br>
+                                        Идеальная маскировка… почти.
+                                    </p>
+                                    <button class="clue-btn" type="button" data-open-evidence>
+                                        Посмотреть улику
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="polaroid" data-polaroid>
+                                <img src="img/storycat/8.jpg" alt="Чита в пакете">
+                                <div class="polaroid__caption">Улика №7: Поймана в пакете.</div>
+                            </div>
+                        </section>
+
+                        <!-- СЦЕНА 9 СЛЕДЫ -->
+                        <section class="scene scene-traces" data-scene="9">
+                            <div class="scene__content">
+                                <div class="scene__panel">
+                                    <h2 class="scene__title">Где она бывает — остаются следы.</h2>
+                                    <p class="scene__text">
+                                        Лапки на полу, шерсть на одежде, подозрительные лужицы в самых неправильных
+                                        местах.<br>
+                                        Её маршрут можно отследить даже без GPS.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- СЦЕНА 10 МИР ЛОМАЕТСЯ -->
+                        <section class="scene scene-glitch" data-scene="10">
+
+
+                            <div class="glitch-cat-area" id="glitchCat"></div>
+                            <audio id="purrSound" src="sounds/purring-cat.mp3"></audio>
+                            <div class="glitch-overlay" id="glitchOverlay"></div>
+
+                            <div class="scene__content">
+                                <div class="scene__panel">
+                                    <h2 class="scene__title">Иногда мир вокруг начинает немного… ломаться.</h2>
+                                    <p class="scene__text">
+                                        Как будто сама реальность не успевает за её перемещениями.<br>
+                                        Изображение дрожит, пиксели расползаются, а кошка остаётся спокойной.
+                                        <br> (нажми на кошку)
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- СЦЕНА 11 ГАЛЕРЕЯ УЛИК -->
+                        <section class="scene scene-evidence" data-scene="11">
+                            <div class="scene__content scene__content-proof">
+                                <div class="scene__panel">
+                                    <h2 class="scene__title">Реальные доказательства.</h2>
+                                    <p class="scene__text">
+                                        Это не просто история. Это хроника её присутствия.<br>
+                                        Улики собраны. Выводы — за тобой.
+                                    </p>
+                                    <button class="clue-btn clue-btn--folder" type="button" data-open-folder>
+                                        Открыть досье
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="polaroid polaroid-small" data-clue="0">
+                                <img src="img/storycat/6.jpg" alt="Чита">
+                                <div class="polaroid__caption">Пятёрочка выручает!
+                                    <br> (кликай на фото)
+                                </div>
+                            </div>
+
+                            <div class="polaroid polaroid-small" data-clue="0">
+                                <img src="img/storycat/4.jpg" alt="Чита">
+                                <div class="polaroid__caption">Чай один точно не попьёшь</div>
+                            </div>
+
+                            <div class="polaroid polaroid-small" data-clue="2">
+                                <img src="img/storycat/3.jpg" alt="Чита">
+                                <div class="polaroid__caption">Большой брат следит за тобой</div>
+                            </div>
+                        </section>
+
+                        <!-- СЦЕНА 12 ФИНАЛ -->
+                        <section class="scene scene-final" data-scene="12">
+                            <div class="scene__content">
+                                <div class="scene__panel">
+                                    <h2 class="scene__title">Теперь она живёт в твоём коде.</h2>
+                                    <p class="scene__text">
+                                        Иногда она появляется в самых неожиданных строчках.<br>
+                                        И, возможно, уже смотрит на тебя из этого экрана.
+                                        <br> (смотри код)
+                                    </p>
+                                    <!-- открой консоль и нажми на заголовок этой сцены -->
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                    <div class="game__end" id="end-screen">
+                        <div class="buttons-row">
+                            <a href="index.html" class="btn btn-prev-global">Вернуться на главную</a>
+                            <button class="btn" id="restart">Играть ещё</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="evidence-modal" id="evidenceModal">
+            <div class="evidence-modal__inner">
+                <div class="evidence-close" id="evidenceClose">&times;</div>
+                <img id="evidenceImg" src="" alt="">
+                <div class="evidence-modal__caption" id="evidenceCaption"></div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="js/game2.js"></script>
+
+</body>
+
+</html>

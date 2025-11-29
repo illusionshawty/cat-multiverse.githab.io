@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cat and code - игра</title>
+    <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+
+<body class="body body-catandcode">
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__inner">
+                        <a class="header__logo" href="/">
+                            <img src="img/catverse.svg" alt="лого">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="main">
+            <div class="container">
+
+                <div class="game4">
+                    <div class="article article--dark" id="virusArticle">
+
+                        <h1 class="article__title glitch-trigger">
+                            Архивный материал: Вирус Felis-Mortis
+                        </h1>
+
+                        <p class="article__meta">Дата восстановления файла: <span>12 марта 1994</span></p>
+
+                        <div class="article__section">
+                            <h2>Введение</h2>
+                            <p>
+                                В конце 1993 года ветеринарные клиники Северной Европы столкнулись
+                                с беспрецедентной ситуацией. Домашние кошки демонстрировали странное
+                                поведение: резкие дерганые движения, потерю ориентации и эпизоды
+                                беспокойства, которые длились сутками.
+                            </p>
+                            <p>
+                                Первые исследования показали: в мозге животных присутствуют неизвестные
+                                вирусные включения. Позднее штамм получил имя <b>Felis-Mortis</b> —
+                                «кошачья смерть».
+                            </p>
+                        </div>
+
+                        <div class="article__section">
+                            <h2>Симптомы заражения</h2>
+                            <ul class="article__list">
+                                <li>сильное расширение зрачков;</li>
+                                <li>реакция на шумы, которых нет;</li>
+                                <li>ночная активность до 72 часов без сна;</li>
+                                <li>странные звуки, похожие на человеческие шепоты;</li>
+                                <li>резкие, будто электрические подёргивания тела;</li>
+                            </ul>
+                            <p class="article__quote">
+                                «Я видел, как кошка моргнула… но картинка моргания раздвоилась. На секунду
+                                появилось два силуэта.» — <span>запись ветеринара NordClinic</span>
+                            </p>
+                        </div>
+
+                        <div class="article__section">
+                            <h2>Пути передачи</h2>
+                            <p>
+                                Впервые предполагалось, что вирус передаётся через слюну или кровь.
+                                Однако после утечки видеозаписи с зараженной кошкой телеканала NordTV
+                                появились новые данные: изображение на экране начало <i>ломаться,
+                                    искажаться, рябить</i>.
+                            </p>
+                            <p>
+                                Несколько зрителей сообщили о внезапных приступах светобоязни, навязчивом
+                                желании следить глазами за движущими объектами и слуховых галлюцинациях.
+                                У всех в доме были кошки.
+                            </p>
+                        </div>
+
+                        <div class="article__section">
+                            <h2>Секретные материалы (отредактировано)</h2>
+                            <p>
+                                По утечкам из лабораторий:
+                            </p>
+                            <ul class="article__list">
+                                <li>вирус реагирует на движение курсора;</li>
+                                <li>вызывает искажения текста и дублирование изображения;</li>
+                                <li>может внедряться в цифровую среду;</li>
+                                <li>вызывает визуальные разрывы, напоминающие VHS-глитчи.</li>
+                            </ul>
+                        </div>
+
+                        <div class="article__section article__final">
+                            <h2>Последний зафиксированный случай</h2>
+                            <p>
+                                Официально вирус был объявлен искоренённым в 1995 году. Однако в архивах
+                                сохранилась запись о последнем заражённом животном:
+                            </p>
+
+                            <p class="article__important glitch-target">
+                                Имя: <b class="glitch-button">Чита</b>.
+                            </p>
+
+                            <p class="article__warning">
+                                <i>Файл наблюдений отсутствует. Возможно, повреждён.</i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="puzzle-container" id="puzzleContainer">
+                        <div class="puzzle-header">
+                            <div class="puzzle-header__title">ТЕРМИНАЛ ВОССТАНОВЛЕНИЯ FELIS-MORTIS</div>
+                            <div class="puzzle-header__subtitle">Сессия: CHITA-RESCUE / VHS-LAB</div>
+                        </div>
+
+                        <div class="puzzle-terminal">
+                            <div class="puzzle-noise"></div>
+
+                            <div class="puzzle-log" id="puzzleLog">
+                                <!-- сюда JS будет писать строки терминала -->
+                            </div>
+
+                            <pre class="puzzle-code" id="puzzleCode"></pre>
+
+                            <div class="puzzle-input">
+                                <label for="puzzleAnswer" class="puzzle-label">
+                                    Введи исправленный код, чтобы стабилизировать сектор:
+                                </label>
+                                <textarea id="puzzleAnswer" class="puzzle-textarea" rows="6"
+                                    spellcheck="false"></textarea>
+                                <button class="btn puzzle-btn" id="puzzleCheckBtn">Проверить</button>
+                            </div>
+
+                            <div class="puzzle-hint" id="puzzleHint"></div>
+                            <div class="puzzle-status" id="puzzleStatus"></div>
+                        </div>
+                    </div>
+
+                    <div class="game-ending" id="gameEnding">
+                        <div class="game-ending__inner">
+                            <h1 class="game-ending__title">СУБЪЕКТ ВОССТАНОВЛЕН</h1>
+                            <p class="game-ending__subtitle">Сигнал: CHITA / STATUS: RESTORED</p>
+
+                            <button class="btn game-ending__btn" id="endingBackBtn">
+                                ◀ Вернуться в мультивселенную
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="vhs-alert" id="vhsAlert">
+            <div class="vhs-alert__inner">
+                <p class="vhs-alert__label">FELIS-MORTIS DETECTED</p>
+                <p class="vhs-alert__sub">сигнал зафиксирован на объекте: Чита</p>
+                <button class="btn vhs-alert__btn" id="startInvestigation">
+                    ▶ Начать расследование
+                </button>
+            </div>
+        </div>
+
+        <script src="js/game4.js"></script>
+
+</body>
+
+</html>

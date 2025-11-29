@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catleak - игра</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+
+<body class="body">
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__inner">
+                        <a class="header__logo" href="/">
+                            <img src="img/catverse.svg" alt="лого">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="main">
+            <div class="container">
+
+                <div class="game__catleak">
+                    <div class="game__ui">
+                        <div class="ui__timer">Время: <span id="time">60</span> c</div>
+                        <div class="ui__score">Следы любви: <span id="score">0</span></div>
+                    </div>
+
+                    <div class="game__room">
+                        <div class="zone" id="zone-computer"></div>
+                        <div class="zone" id="zone-bed"></div>
+                        <div class="zone" id="zone-carpet"></div>
+                        <div class="zone" id="zone-sofa"></div>
+                        <div class="item secret" id="bowl" data-name="миска"></div>
+                        <audio id="meow-sound" src="sounds/meow.mp3"></audio>
+                    </div>
+
+                    <div class="game__end" id="end-screen">
+                        <p class="end-message-win">ура! ты нашел пасхалку</p>
+                        <p class="end-message-loss">пасхалка не найдена, не удалось удивить хозяйку, попробуй ещё раз
+                        </p>
+                        <div class="buttons-row">
+                            <a href="index.html" class="btn btn-prev-global">Вернуться на главную</a>
+                            <button class="btn" id="restart">Играть ещё</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <script src="js/game1.js"></script>
+
+</body>
+
+</html>
